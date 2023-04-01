@@ -5,12 +5,12 @@
   "scripts": {
     "build": "webpack ./ts/src",
     "build:dev": "npm run build -- --watch --mode=development",
+    "seed": "npx prisma db seed",
     "start": "tsc && node build/server/index.js",
-    "start:dev": "npm run build:dev & nodemon ts/server/index.ts",
-    "seed": "npx prisma db seed"
+    "start:dev": "npm run build:dev & nodemon ts/server/index.ts"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/data/seed.ts"
   },
   "keywords": [],
   "author": "",
