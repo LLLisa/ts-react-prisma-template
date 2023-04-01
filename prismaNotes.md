@@ -22,3 +22,9 @@ $ npx prisma studio
 - manually enter rows???
 
 https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases-typescript-postgres
+
+sync(force) process =
+
+1. manually drop all tables and cascade (exclude \_prisma_migrations)
+2. npx prisma db push
+3. npx prisma db seed
